@@ -2,7 +2,7 @@
 
 ## Designing the `pbsparse` package
 
-The PBS Pro scheduler writes historical *event* records in "accounting logs", which are stored on the PBS server host - typically an isolated system not accessible to users [@pbsref]. These logs are structured with one event per line, and each event contains data separated by commas or spaces, depending on whether the information is record metadata or job metadata. An example record follows.
+The PBS Pro scheduler writes historical *event* records in "accounting logs", which are stored on the PBS server host - typically an isolated system not accessible to users {cite}`pbsref`. These logs are structured with one event per line, and each event contains data separated by commas or spaces, depending on whether the information is record metadata or job metadata. An example record follows.
 
 >04/16/2025 09:23:33;Q;4413086.casper-pbs;user=vanderwb group=csgteam account="SCSG0001" project=_pbs_project_default jobname=vncs-default queue=casper ctime=1744817013 qtime=1744817013 etime=0 Resource_List.gpu_type=gp100 Resource_List.mem=10gb Resource_List.ncpus=1 Resource_List.ngpus=1 Resource_List.nodect=1 Resource_List.place=scatter Resource_List.select=1:ncpus=1:ngpus=1:os=opensuse15:ompthreads=1 Resource_List.walltime=04:00:00
 
@@ -29,7 +29,7 @@ By setting `process = True`, we tell the init routine to convert relevant data i
 
 The `pbsparse` package also includes a function, `get_pbs_records`, which allows the user to read in all records from an accounting log file. This operation could become quite expensive in the old `qhist` code as a file would be read in and `dict`-type records would be stored in a `list`. Since the raw accounting logs can grow to O(100)MB in size, and queries can span multiple log files (one log per day) the resulting Python data structures became prohibitively large.
 
-In the redesign, we have altered this code so that instead of returning a list of dictionaries, it returns a *[generator](https://wiki.python.org/moin/Generators)* of `PbsRecord` objects. Many Python coders will be familiar with generators, but fewer coders will have written their own. Defining a generator function allows us to call it as if it was an iterator, and only a single iteration is stored in memory at any time [@pywiki]. A stripped down snippet of the `get_pbs_records` code follows.
+In the redesign, we have altered this code so that instead of returning a list of dictionaries, it returns a *[generator](https://wiki.python.org/moin/Generators)* of `PbsRecord` objects. Many Python coders will be familiar with generators, but fewer coders will have written their own. Defining a generator function allows us to call it as if it was an iterator, and only a single iteration is stored in memory at any time {cite}`pywiki`. A stripped down snippet of the `get_pbs_records` code follows.
 
 ```python
 def get_pbs_records(data_file, process = False, type_filter = None, ...):
@@ -136,7 +136,7 @@ The old version of `qhist` featured a rudimentary installation approach: simply 
 
 Turning `qhist` into an actual Python package confers many benefits, even if we don't envision it being our primary deployment method on NSF NCAR systems. We can better track versions and dependencies, and we can easily share the tool with other sites running PBS Pro.
 
-This process, as documented in the helpful Python Packaging Tutorial [@pypkgtut], is very easy. We decided to use `setuptools`  as the build backend to create our wheels. Once we created a packaging environment with the necessary tools, all we need to do was create a pyproject.toml file with the package specifications. A simplified version is shown here:
+This process, as documented in the helpful Python Packaging Tutorial {cite}`pypkgtut`, is very easy. We decided to use `setuptools`  as the build backend to create our wheels. Once we created a packaging environment with the necessary tools, all we need to do was create a pyproject.toml file with the package specifications. A simplified version is shown here:
 
 ```ini
 [build-system]
@@ -214,7 +214,7 @@ We have added both regression and live testing to ameliorate both of these issue
 
 ### Regression tests with *pytest*
 
-Many regression testing packages/frameworks exist for Python packages. One of the most popular frameworks is pytest [@pytest] - used by [numpy](https://github.com/numpy/numpy/tree/main/numpy/tests), for one prominent example - which we use to implement regression testing for `qhist`.
+Many regression testing packages/frameworks exist for Python packages. One of the most popular frameworks is pytest {cite}`pytest` - used by [numpy](https://github.com/numpy/numpy/tree/main/numpy/tests), for one prominent example - which we use to implement regression testing for `qhist`.
 
 Most tests with *pytest* are written simply using functions containing an assertion. For example, in this test we evaluate whether the time bounds calculation function returns the correct result given a number of days back to search the logs:
 
