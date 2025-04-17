@@ -8,4 +8,4 @@ parts:
       - file: notebooks/2_methods.md
       - file: notebooks/3_results.ipynb
       - file: notebooks/4_conclusion.md
-      - file: notebooks/5_references.md
+      - file: references.bib
