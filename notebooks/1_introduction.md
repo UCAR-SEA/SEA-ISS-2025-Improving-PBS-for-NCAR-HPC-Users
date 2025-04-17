@@ -3,7 +3,7 @@ The batch scheduler system is typically a crucial component to any modern superc
 
 Multiple batch schedulers exist in the current HPC landscape, including Slurm, PBS Pro, and LSF. Some systems are even repurposing cloud-orchestration systems like Kubernetes to assign work on large clusters. However, not all schedulers offer the same functionality.
 
-At NSF NCAR, we currently provide two large clusters to our user community. Each system has a defined purpose, and both rely on the PBS Pro batch scheduler to assign work.
+At NSF NCAR, we currently provide two large clusters to our user community [@ncarhpc]. Each system has a defined purpose, and both rely on the PBS Pro batch scheduler to assign work.
 
 * **Derecho** - our HPC system intended for large modeling experiments and other highly-scalable work like machine learning
 * **Casper** - our data analysis, visualization, and heterogeneous workflow machine
@@ -36,7 +36,7 @@ Resolving this quandary was a top priority in the modernization effort. In addit
 * Improve output formatting and filtering capabilities
 * Convert the script into a *package* and make it installable via `pip`
 * Provide an alternate `Makefile` installation method for use outside of a Python site library
-* Use [Github Actions](https://docs.github.com/en/actions) to automate package deployment to [PyPI](https://pypi.org/)
+* Use Github Actions [@ghactions] to automate package deployment to [PyPI](https://pypi.org/)
 * Augment user documentation via a repository `README.md` and a man page
 * Add a regression test suite
 * Use self-hosted Actions runners to perform live testing on our HPC systems

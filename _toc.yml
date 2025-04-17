@@ -2,9 +2,10 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Improving PBS for NCAR HPC Users
+  - caption: Contents
     chapters:
       - file: notebooks/1_introduction.md
       - file: notebooks/2_methods.md
       - file: notebooks/3_results.ipynb
       - file: notebooks/4_conclusion.md
+      - file: references.bib
