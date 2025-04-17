@@ -11,6 +11,6 @@ At NSF NCAR, our two main clusters - Derecho and Casper - both run PBS Pro, thou
 
 In this notebook, we focus on the `qhist` utility as a case study, demonstrating recent efforts to modernize our PBS tooling. Such efforts include adding requested features, incorporating more modern Python programming practices, reducing program overhead, improving documentation, converting scripts into actual Python packages, using automated deployment, and adding regression testing.
 
-**Keywords:** modernization,automation,packaging,python,pbs,performance
+**Keywords:** modernization, automation, packaging, python, pbs, performance
 
 **Acknowledgements**: The author would like to acknowledge testing and feature suggestions from colleagues in the HPC Consulting Services Group at NSF NCAR, as well as constructive feedback and bug reports from the NSF NCAR HPC user community as a whole.

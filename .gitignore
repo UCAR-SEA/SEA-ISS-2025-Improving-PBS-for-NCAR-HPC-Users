@@ -134,3 +134,8 @@ dmypy.json
 
 # Ephemeral .nfs files
 .nfs*
+
+# Notebook artifacts
+notebooks/local
+notebooks/qhist
+notebooks/sample_logs

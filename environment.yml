@@ -10,3 +10,5 @@ dependencies:
   - sphinxcontrib-bibtex
   - docutils
   - lxml-html-clean
+  - git
+  - bash_kernel

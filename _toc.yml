@@ -2,18 +2,9 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Premable
+  - caption: Improving PBS for NCAR HPC Users
     chapters:
-      - file: submission-guidelines.md
-      - file: how-to-cite-this-paper.md
-  - caption: Example Paper 1
-    chapters:
-      - file: notebooks/notebook-template.ipynb
-  - caption: Example Paper 2
-    chapters:
-      - file: notebooks/example_2/notebook-example2_part1.md
-      - file: notebooks/example_2/notebook-example2_part2.ipynb
-      - file: notebooks/example_2/notebook-example2_part3.md
-      - file: notebooks/example_2/notebook-example2_references.md
-
-
+      - file: notebooks/1_introduction.md
+      - file: notebooks/2_methods.md
+      - file: notebooks/3_results.ipynb
+      - file: notebooks/4_conclusion.md

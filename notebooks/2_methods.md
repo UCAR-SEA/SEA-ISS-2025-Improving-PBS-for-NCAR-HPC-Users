@@ -46,9 +46,9 @@ def get_pbs_records(data_file, process = False, type_filter = None, ...):
             if not type_filter or record[20] in type_filter:
                 event = PbsRecord(record, process, time_divisor = time_divisor)
 								
-								# match is determined by omitted record-filtering code
+				# match is determined by omitted record-filtering code
                 if match:
-		                yield event
+    		        yield event
 ```
 
 The generator can then be used as follows.
@@ -197,11 +197,11 @@ We could also manually create the man page, but this is error prone and laboriou
 ```Makefile
 # Requires packages "pbsparse" and "argparse-manpage" in your Python environment
 man:
-	argparse-manpage --pyfile src/qhist/qhist.py --author "Written by Brian Vanderwende."   \
-		--project-name qhist --function get_parser --version $(VERSION)                     \
-		--description "a utility for querying historical PBS records"                       \
-		--manual-title "PBS Professional Community Utilities"                               \
-		--output share/man/man1/qhist.1
+    argparse-manpage --pyfile src/qhist/qhist.py --author "Written by Brian Vanderwende."   \
+        --project-name qhist --function get_parser --version $(VERSION)                     \
+        --description "a utility for querying historical PBS records"                       \
+        --manual-title "PBS Professional Community Utilities"                               \
+        --output share/man/man1/qhist.1
 ```
 
 ## Regression and *live* testing
