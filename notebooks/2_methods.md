@@ -242,19 +242,19 @@ Fortunately, we can rely on GitHub Actions *[self-hosted](https://docs.github.co
 Our workflow job for testing on Derecho is shown below.
 
 ```yaml
-  derecho-test:
-    name: ⚗️  Test qhist parsing on live Derecho data
-    runs-on: derecho-runner
-    if: github.event_name == 'schedule' || contains(fromJSON('["both","derecho"]'), inputs.system)
+derecho-test:
+  name: ⚗️  Test qhist parsing on live Derecho data
+  runs-on: derecho-runner
+  if: github.event_name == 'schedule' || contains(fromJSON('["both","derecho"]'), inputs.system)
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Install qhist with Makefile
-      run: make install PREFIX=install
-    - name: Test qhist and check status
-      run: |
-        bin/qhist > /dev/null
-      working-directory: install
+  steps:
+  - uses: actions/checkout@v4
+  - name: Install qhist with Makefile
+    run: make install PREFIX=install
+  - name: Test qhist and check status
+    run: |
+      bin/qhist > /dev/null
+    working-directory: install
 ```
 
 This job also validates out our `Makefile` installation method. In the event that a log cannot be parsed properly, we will have record in the workflow log. Here is an example of a workflow that failed the live testing:
