@@ -23,7 +23,7 @@ For a time, Casper ran the Slurm scheduler, and so our users and support staff h
 
 These tools have seen widespread use by our support staff and/or our user community, but they were written as bespoke solutions to address an immediate need. To ensure the tools are maintainable as languages, staff, and clusters evolve, it is increasingly crucial to use modern software engineering practices.
 
-In this notebook, we undertake a modernization effort for our `qhist` script, which is written in Python. The current implementation of this script has some unique shortcomings that are worth highlighting:
+In this notebook, we undertake a modernization effort for our `qhist` script ([source code repo](https://github.com/NCAR/qhist)), which is written in Python. The current implementation of this script has some unique shortcomings that are worth highlighting:
 
 * All data are read into memory, and so large queries over long time windows quickly get expensive and may exceed the memory available to the user
 * The source records are only available on login nodes (via rsync from the PBS server itself), so `qhist` cannot be used from within compute jobs
@@ -36,7 +36,7 @@ Resolving this quandary was a top priority in the modernization effort. In addit
 * Improve output formatting and filtering capabilities
 * Convert the script into a *package* and make it installable via `pip`
 * Provide an alternate `Makefile` installation method for use outside of a Python site library
-* Use Github Actions {cite}`ghactions` to automate package deployment to [PyPI](https://pypi.org/)
+* Use GitHub Actions {cite}`ghactions` to automate package deployment to [PyPI](https://pypi.org/)
 * Augment user documentation via a repository `README.md` and a man page
 * Add a regression test suite
 * Use self-hosted Actions runners to perform live testing on our HPC systems
