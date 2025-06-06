@@ -206,7 +206,7 @@ man:
 
 ## Regression and *live* testing
 
-The lack of any testing mechanism in the previous `qhist` version meant that problems were almost always discovered during actual usage. If a new feature was implemented, parts of the code base rarely used could break in ways not evaluated by inconsistent manual testing.
+The lack of any testing mechanism in the previous `qhist` version meant that problems were almost always discovered during actual usage. If a new feature were implemented, parts of the code base rarely used could break in ways not evaluated by inconsistent manual testing.
 
 Even worse, the PBS Pro accounting logs occasionally include fields with unexpected type, non-standard user inputs, or simply truncated records due to a server hiccup. Unless staff or users reported the error during usage for the day, such problems could go unnoticed.
 
