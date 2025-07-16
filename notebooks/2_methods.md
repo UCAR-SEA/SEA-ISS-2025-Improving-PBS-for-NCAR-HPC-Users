@@ -23,7 +23,7 @@ import pbsparse
 q_event = pbsparse.PbsRecord(record, process = True)
 ```
 
-By setting `process = True`, we tell the init routine to convert relevant data into useful forms:  `ncpus` into `int`, start and end times into `datetimes` and so on.
+By setting `process = True`, we tell the init routine to convert relevant data into useful forms: `ncpus` into `int`, start and end times into `datetimes` and so on.
 
 ### Lightweight processing with a *generator*
 
@@ -188,11 +188,11 @@ lib/pbsparse/Makefile:
 
 ## Adding user documentation
 
-The original version of `qhist` suffered from an all-to-common affliction: a total lack of user documentation. The only breadcrumbs offered to the user came in the form of the `-h/--help` argparse options. Beyond that, our  users were largely on their own (though we did provide *some* documentation of the command in our online HPC documentation).
+The original version of `qhist` suffered from an all-to-common affliction: a total lack of user documentation. The only breadcrumbs offered to the user came in the form of the `-h/--help` argparse options. Beyond that, our users were largely on their own (though we did provide *some* documentation of the command in our online HPC documentation).
 
 To remedy this omission, we decided to add two basic forms of documentation that come standard with most programs - the `README.md` and a `man` page. Adding the README was straightforward enough, though we intend to add some automation ensuring that the file is updated for every new version.
 
-We could also manually create the man page, but this is error prone and laborious. Instead, we use a helpful package called [argparse-manpage](https://github.com/praiskup/argparse-manpage), which takes the information contained with the `ArgumentParser` object and outputs a man page (accepting some customization arguments along the way). Again, we leverage our `Makefile` to define a man page creation target:
+We could also manually create the man page, but this is error-prone and laborious. Instead, we use a helpful package called [argparse-manpage](https://github.com/praiskup/argparse-manpage), which takes the information contained with the `ArgumentParser` object and outputs a man page (accepting some customization arguments along the way). Again, we leverage our `Makefile` to define a man page creation target:
 
 ```Makefile
 # Requires packages "pbsparse" and "argparse-manpage" in your Python environment
@@ -257,7 +257,7 @@ derecho-test:
     working-directory: install
 ```
 
-This job also validates out our `Makefile` installation method. In the event that a log cannot be parsed properly, we will have record in the workflow log. Here is an example of a workflow that failed the live testing:
+This job also validates out our `Makefile` installation method. In the event that a log cannot be parsed properly, we will have a record in the workflow log. Here is an example of a workflow that failed the live testing:
 
 ```
 Run bin/qhist > /dev/null

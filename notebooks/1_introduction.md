@@ -17,7 +17,7 @@ For a time, Casper ran the Slurm scheduler, and so our users and support staff h
 | `pbsprio` | `sprio` | PBS did not provide a tool to query factors affecting relative job priority |
 | `launch_cf` | `srun`* | User wish to launch many serial tasks easily on the compute nodes |
 
-**`srun` is not a perfect analog for launch_cf, which facilitates MPMD submission of work, but it can be used to accomplish the same  outcome*
+**`srun` is not a perfect analog for launch_cf, which facilitates MPMD submission of work, but it can be used to accomplish the same outcome*
 
 ### Modernizing the tool set
 
@@ -35,7 +35,7 @@ Resolving this quandary was a top priority in the modernization effort. Along th
 * split out PBS record processing into a separate package, allowing us to reuse code in other use cases;
 * improve output formatting and filtering capabilities;
 * convert the script into a *package* and make it installable via `pip`;
-* provide an alternate `Makefile` installation method for use outside of a Python site library;
+* provide an alternate `Makefile` installation method for use outside a Python site library;
 * use GitHub Actions {cite}`ghactions` to automate package deployment to [PyPI](https://pypi.org/);
 * augment user documentation via a repository `README.md` and a man page;
 * add a regression test suite;
