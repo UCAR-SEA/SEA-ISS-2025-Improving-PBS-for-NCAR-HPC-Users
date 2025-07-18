@@ -47,7 +47,7 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/UCAR-SEA/SEA-ISS-2025-Improving-PBS-for-NCAR-HPC-Users  # Online location of your book
-  path_to_book: notebooks # Optional path to your book, relative to the repository root
+  path_to_book: # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -80,11 +80,8 @@ sphinx:
       use_edit_page_button: true
       use_download_button: true
       use_fullscreen_button: true
-      github_url: https://github.com/UCAR-SEA/SEA-ISS-2025-Improving-PBS-for-NCAR-HPC-Users
+      github_url: https://github.com/UCAR-SEA
       search_bar_text: Search
-      launch_buttons:
-        binderhub_url: https://mybinder.org
-        notebook_interface: jupyterlab
       extra_navbar: |
         <div>Powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>Theme adapted from <a href="https://projectpythia.org/">Project Pythia</a>
 
@@ -92,7 +89,7 @@ sphinx:
         - name: SEA Home
           url: https://sea.ucar.edu
         - name: ISS Conference
-          url: https://sea.ucar.edu/iss/
+          url: https://sea.ucar.edu/iss/2025/
         - name: ISS Proceedings
           url: https://sea.ucar.edu/iss/2025-proceedings
 
