@@ -80,7 +80,6 @@ sphinx:
       use_edit_page_button: true
       use_download_button: true
       use_fullscreen_button: true
-      use_binder_button: true
       github_url: https://github.com/UCAR-SEA/SEA-ISS-2025-Improving-PBS-for-NCAR-HPC-Users
       search_bar_text: Search
       launch_buttons:
@@ -101,12 +100,3 @@ sphinx:
       banner: []
       standalone: []
 
-    extra_extensions:
-    - ablog
-    - sphinx_click.ext
-    - sphinx.ext.autodoc
-    - sphinx.ext.intersphinx
-    - sphinxcontrib.bibtex
-    - sphinxcontrib.youtube
-
-  
