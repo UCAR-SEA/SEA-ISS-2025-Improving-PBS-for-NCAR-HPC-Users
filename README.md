@@ -3,7 +3,7 @@
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-green?style=flat-square&logo=Jupyter&color=green)](https://jupyter.org/try)
 ![Static Badge](https://img.shields.io/badge/DOI-10.XXXXX%2Fnnnnn-blue)
 
-**Authors**: Brian Vanderwende
+**Author**: Brian Vanderwende
 
 **Abstract**: For most HPC users, the jobs scheduling software is an integral component of the system, allowing access to the vast compute resources that distinguish a cluster from a workstation. A few workload managers are common in traditional scientific HPC (e.g., Slurm and PBS) with newer tools like Kubernetes also becoming more common. HPC users and administrators are often forced to adapt to a new scheduler upon procurement of the latest system, at which point they experience the strengths and limitations of the new tool.
 
